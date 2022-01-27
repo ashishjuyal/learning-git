@@ -8,9 +8,15 @@ Git is a free, open source tool for source control:
 
 When you have Git installed you should be able to run these commands and get some output:
 
-```
+```shell
+# should be version 2.25 or above otherwise install the latest version.
 git --version
 ```
+
+## Visual studio code editor (optional)
+Visual studio code is a free, open-source editor
+
+[Download Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Getting help
 There are three equivalent ways to get the comprehensive manual page (manpage) help for any of the Git commands:
