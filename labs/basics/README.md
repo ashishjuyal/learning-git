@@ -1,5 +1,3 @@
-## Git Basics
-
 ## Getting a Git repository
 
 There are two ways to obtain a Git repository:
@@ -137,11 +135,42 @@ git status
 git add README
 git status
 ```
-
 </details>
 <br>
 
-# Short status
+## Making changes to an already staged file
+Let's change the `README` file. This file is already getting tracked and staged, you have checked that using `git status`.
+Append a new line to the `README` with below command:
+
+```
+echo "Appending a new line to know what happens when we make changes to an already staged file." >> README
+```
+
+Check the `git status`:
+```
+On branch master
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README
+```
+Now `README` is listed as both `staged` and `unstaged`. How is that possible?
+
+<details>
+  <summary>🎤 Discuss?</summary><br>
+
+It turns out that Git stages a file exactly as it is when you run the `git add` command. If you commit now, the version of `README` as it was when you last ran the `git add` command is how it will go into the commit, not the version of the file as it looks in your working directory when you run `git commit`. If you modify a file after you run `git add`, you have to run `git add` again to stage the latest version of the file.
+</details>
+<br>
+
+## Short status
 While `git status` output is pretty comprehensive. Git also has a short status flag to see the changes in a more compact way.
 
 ```
@@ -149,15 +178,42 @@ git status -s
 ```
 Output:
 ```
-A  README
+AM  README
 A  index.html
 ```
-New files that aren’t tracked have a `??` next to them, new files that have been added to the staging area have an `A`, modified files have an `M` and so on.
 
+**Note:** Stort status flags
+- `??` New files that aren’t tracked 
+- `A`  New files that have been added to the staging area
+- `M`  Modified files
+- `D`  Deleted files
+
+## Viewing Your Staged and Unstaged Changes
+The `git status` command just tells which files were changed but what you want to know is the "what you changed". `git diff` comes in handy to find the differences.
+
+To see what you’ve changed but not yet staged, type git diff with no other arguments:
+
+
+```
+git diff
+```
+output:
+```
+diff --git a/README b/README
+index 31335b8..d046718 100644
+--- a/README
++++ b/README
+@@ -3,3 +3,4 @@ Repository for learning git
+ This is an example repository for the Git tutoial
+
+ This repository is built step by step in the tutorial.
++Appending a new line to know what happens when we make changes to an already staged file.
+```
+`git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
 
 ## First Commit
 
-As you have seen in the last `git status`, README and index.html are staged for commit.
+Let's add the README file to the staging area and check the `git status`. You'll see README and index.html are staged for commit.
 
 ```
 On branch master
@@ -169,11 +225,13 @@ Changes to be committed:
         new file:   index.html
 ```
 
-Let's make our first commit
+Let's make our first commit:
 
-```
+```shell
+# The commit command performs a commit, and the -m "message" adds a message.
 git commit -m "making my first commit"
 ```
+
 check the status:
 ```
 git status
