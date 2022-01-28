@@ -46,5 +46,3 @@ git commit -m "adding .gitignore"
 </details>
 <br>
 
-## Summary
-> In this section, we learned how to tell Git to ignore certain files form being tracked. In the next section, you will learn to remove and move files in git [Remove and Move](remove-and-move.md).

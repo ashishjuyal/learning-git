@@ -23,4 +23,4 @@ git status -s
 git commit -a -m "adding one more movies and books"
 
 ```
-> Back to exercise [Exercise](commit.md#lab).
+> Back to exercise [Exercise](README.md#lab).

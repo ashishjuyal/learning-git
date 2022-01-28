@@ -208,6 +208,3 @@ index 31335b8..d046718 100644
 +Appending a new line to know what happens when we make changes to an already staged file.
 ```
 > `git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you've made that you haven't yet staged.
-
-## Summary
-> In this section, we had learned to create a new git repository, adding files to git, tracking new files and explored what happens when we make changes to already staged files. We also learned to see the status of the repository at any time using `git status`. Now it's time to make a commit to your files. This will be the topic of next section [Making a commit](commit.md).
