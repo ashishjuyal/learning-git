@@ -193,7 +193,6 @@ The `git status` command just tells which files were changed but what you want t
 
 To see what you’ve changed but not yet staged, type git diff with no other arguments:
 
-
 ```
 git diff
 ```
@@ -211,28 +210,5 @@ index 31335b8..d046718 100644
 ```
 `git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
 
-## First Commit
-
-Let's add the README file to the staging area and check the `git status`. You'll see README and index.html are staged for commit.
-
-```
-On branch master
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-        new file:   README
-        new file:   index.html
-```
-
-Let's make our first commit:
-
-```shell
-# The commit command performs a commit, and the -m "message" adds a message.
-git commit -m "making my first commit"
-```
-
-check the status:
-```
-git status
-```
+## Summary
+> In this section, we had learned to create a new git repository, adding files to git, tracking new files and explored what happens when we make changes to already staged files. We also learned to see the status of the repository at any time using `git status`. Now it's time to make a commit to your files. This will be the topic of next section [Making a commit](commit.md).
