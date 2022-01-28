@@ -20,7 +20,7 @@ mkdir learn-git
 cd learn-git
 git init
 ```
-This will create a new subdirectory named .git that contains all your necessary repository files. This is the local Git database. In Linux and MacOS this folder will not be visible because it starts with a dot that means a hidden folder. To view use `ls -la` command on the terminal.
+> This will create a new subdirectory named `.git` that contains all your necessary repository files. This is the local Git database. In Linux and MacOS this folder will not be visible because it starts with a `dot` that means a hidden folder. To view use `ls -la` command on the terminal.
 
 ## Cloning an existing repository
 To copy an existing repository in a new folder you need to use `git clone`. Git receives a full copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down by default when you run `git clone`
@@ -89,10 +89,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 You can see the new `index.html` file is untracked. Untracked basically means that Git sees a file you didn’t have in the previous snapshot (commit), and which hasn’t yet been staged.
 
-Files in your Git repository folder can be in one of 2 states:
-
-- Tracked - files that Git knows about and are added to the repository
-- Untracked - files that are in your working directory, but not added to the repository
+> Files in your Git repository folder can be in one of 2 states:
+ - Tracked - files that Git knows about and are added to the repository
+ - Untracked - files that are in your working directory, but not added to the repository
 
 ## Tracking new files
 In order to begin tracking a new file, you use the command `git add`. To begin tracking the `index.html` file, you have to run this:
@@ -208,7 +207,7 @@ index 31335b8..d046718 100644
  This repository is built step by step in the tutorial.
 +Appending a new line to know what happens when we make changes to an already staged file.
 ```
-`git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
+> `git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
 
 ## Summary
 > In this section, we had learned to create a new git repository, adding files to git, tracking new files and explored what happens when we make changes to already staged files. We also learned to see the status of the repository at any time using `git status`. Now it's time to make a commit to your files. This will be the topic of next section [Making a commit](commit.md).

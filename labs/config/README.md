@@ -40,9 +40,9 @@ git config --global core.editor pico
 You can find the instructions to set up your favorite editor with Git in [git config core.editor commands](https://git-scm.com/book/en/v2/ch00/ch_core_editor)
 
 ## Your default branch name
-By default Git will create a branch called master when you create a new repository with git init. From Git version 2.28 onwards, you can set a different name for the initial branch.
+By default Git will create a branch called master when you create a new repository with `git init`. From Git version 2.28 onwards, you can set a different name for the initial branch.
 
-For more background on this change, this statement from the [Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) is an excellent place to look
+> For more background on this change, this statement from the [Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) is an excellent place to look
 
 To set main as the default branch name do:
 
