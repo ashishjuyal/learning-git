@@ -124,3 +124,15 @@ git restore movies.md
 ```  
 </details>
 <br>
+
+## Removing the last commit
+Let's suppose you have made the last commit by mistake and you want to remove the last commit. You can use `git reset` command to do that. Remember, this is a dangerous command and you should absolutely be sure of what you are doing before running this command:
+
+```shell
+# prints the SHA1 of all the commits, take a note of last commit (from the top)
+git log --pretty=oneline
+# removes the last commit and resets the head to the second-last commit
+git reset --hard HEAD~1
+# verify the output
+git log --pretty=oneline
+```
