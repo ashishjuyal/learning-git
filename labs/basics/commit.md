@@ -54,5 +54,17 @@ You will see the NOTES file was not committed. New files have to be added using 
 </details>
 <br>
 
+## Lab
+In this lab you will create new files and commit the changes to git.
+
+- create a two new files called `movies.md` and `books.md` and add your favourite movie/books names to it.
+- print the repository short status.
+- stage the file and commit the changes.
+- edit the files again and add one more movie and book name to it.
+- again print the repository short status.
+- make a commit skipping the staging area.
+
+> Stuck? Try [hints](commit-hints.md) or check the [solution](commit-solution.md).
+
 ## Summary
 > In this section, we learned to make a commit and also learned to skip the staging area for already tracked files. In the next section we will learn to tell git, not to track certain files. Many times you will have a set of files which you don't want Git to track. This will be the topic of next section [Ignoring files](ignore.md).
