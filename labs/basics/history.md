@@ -37,7 +37,7 @@ Date:   Fri Jan 28 13:02:32 2022 +0530
 ...............
 ```
 
-> By default, with no arguments, `git log` lists the commits made in that repository in reverse chronological order; that is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author’s name and email, the date written, and the commit message.
+> By default, with no arguments, `git log` lists the commits made in that repository in reverse chronological order; that is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author's name and email, the date written, and the commit message.
 
 Git log has a huge number of options, lets take a look at some of the most popular:
 
@@ -46,7 +46,7 @@ Git log has a huge number of options, lets take a look at some of the most popul
     git log --stat
     ```
 
-- To change the default log output you can use few prebuilt option values. The `oneline` value for this option prints each commit on a single line, which is useful if you’re looking at a lot of commits. In addition, the `short`, `full`, and `fuller` values show the output in roughly the same format but with less or more information, respectively.
+- To change the default log output you can use few prebuilt option values. The `oneline` value for this option prints each commit on a single line, which is useful if you're looking at a lot of commits. In addition, the `short`, `full`, and `fuller` values show the output in roughly the same format but with less or more information, respectively.
     ```
     git log --pretty=oneline
     ```

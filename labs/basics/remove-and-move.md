@@ -1,6 +1,6 @@
 ## Removing files
 
-To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The `git rm` command does that, and also removes the file from your working directory so you don’t see it as an untracked file the next time around.
+To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The `git rm` command does that, and also removes the file from your working directory so you don't see it as an untracked file the next time around.
 
 If you simply remove the file from your working directory, it shows up under the "Changes not staged for commit" (that is, unstaged) area of your `git status` output:
 
@@ -64,4 +64,4 @@ $ git rm books.md
 $ git add fav-books.md
 ```
 
-> Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the mv command. The only real difference is that `git mv` is one command instead of three - it’s a convenience function.
+> Git figures out that it's a rename implicitly, so it doesn't matter if you rename a file that way or with the mv command. The only real difference is that `git mv` is one command instead of three - it's a convenience function.

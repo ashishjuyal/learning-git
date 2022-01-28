@@ -87,7 +87,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-You can see the new `index.html` file is untracked. Untracked basically means that Git sees a file you didn’t have in the previous snapshot (commit), and which hasn’t yet been staged.
+You can see the new `index.html` file is untracked. Untracked basically means that Git sees a file you didn't have in the previous snapshot (commit), and which hasn't yet been staged.
 
 > Files in your Git repository folder can be in one of 2 states:
  - Tracked - files that Git knows about and are added to the repository
@@ -182,7 +182,7 @@ A  index.html
 ```
 
 **Note:** Stort status flags
-- `??` New files that aren’t tracked 
+- `??` New files that aren't tracked 
 - `A`  New files that have been added to the staging area
 - `M`  Modified files
 - `D`  Deleted files
@@ -190,7 +190,7 @@ A  index.html
 ## Viewing Your Staged and Unstaged Changes
 The `git status` command just tells which files were changed but what you want to know is the "what you changed". `git diff` comes in handy to find the differences.
 
-To see what you’ve changed but not yet staged, type git diff with no other arguments:
+To see what you've changed but not yet staged, type git diff with no other arguments:
 
 ```
 git diff
@@ -207,7 +207,7 @@ index 31335b8..d046718 100644
  This repository is built step by step in the tutorial.
 +Appending a new line to know what happens when we make changes to an already staged file.
 ```
-> `git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
+> `git diff` command compares what is in your working directory with what is in your staging area. The result tells you the changes you've made that you haven't yet staged.
 
 ## Summary
 > In this section, we had learned to create a new git repository, adding files to git, tracking new files and explored what happens when we make changes to already staged files. We also learned to see the status of the repository at any time using `git status`. Now it's time to make a commit to your files. This will be the topic of next section [Making a commit](commit.md).

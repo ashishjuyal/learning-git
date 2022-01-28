@@ -1,5 +1,5 @@
 ## Ignoring files
-Often, you will have a set of files that you don't want to commit and don’t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or artifacts produced by your build process. For such cases, git provides a mechanism to ignore such files. You can create a file listing patterns to match them named `.gitignore`.
+Often, you will have a set of files that you don't want to commit and don't want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or artifacts produced by your build process. For such cases, git provides a mechanism to ignore such files. You can create a file listing patterns to match them named `.gitignore`.
 
 > `.gitignore` also support wildcards and regular expressions. For example:
 

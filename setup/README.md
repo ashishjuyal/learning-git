@@ -32,7 +32,7 @@ For example, you can get the manpage help for the git config command by running 
 git help config
 ```
 
-If you don’t need the full-blown manpage help and need concise "help", you can use `-h` option:
+If you don't need the full-blown manpage help and need concise "help", you can use `-h` option:
 ```
 $ git add -h
 usage: git add [<options>] [--] <pathspec>...
