@@ -65,3 +65,8 @@ $ git add fav-books.md
 ```
 
 > Git figures out that it's a rename implicitly, so it doesn't matter if you rename a file that way or with the mv command. The only real difference is that `git mv` is one command instead of three - it's a convenience function.
+
+Let's commit the changes:
+```
+git commit -m "renamed books.md to fav-books.md"
+```
