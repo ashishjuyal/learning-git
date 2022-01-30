@@ -14,8 +14,8 @@ Let's create a new git repository to visualize this:
 
 ### On Windows (open Git Bash):
 ```shell
-mkdir -p c:/git-repos/branches
-cd c:/git-repos/branches
+mkdir -p c:/git-repos/books
+cd c:/git-repos/books
 # setting main as the default branch name
 git config --global init.defaultBranch main
 git init
@@ -23,8 +23,8 @@ git init
 ### On Linux & MacOS (open terminal):
 ```shell
 cd $HOME
-mkdir -p git-repos/branches
-cd git-repos/branches
+mkdir -p git-repos/books
+cd git-repos/books
 # setting main as the default branch name
 git config --global init.defaultBranch main
 git init
