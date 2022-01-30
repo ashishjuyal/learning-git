@@ -8,33 +8,47 @@ git log
 `Output:`
 
 ```
-commit 303c44a995b3ea084d3047b07fa114637a94fa09 (HEAD -> master)
+commit df436213eb18d9bf4b3783077fcee4426f3fe57e (HEAD -> master)
 Author: Ashish Juyal <ashish.juyal@gmail.com>
-Date:   Fri Jan 28 16:26:53 2022 +0530
+Date:   Sat Jan 29 12:58:20 2022 +0530
 
-    books  renamed
+    renamed books.md to fav-books.md
 
-commit 858cb90a147dce759807ad12fd76fbf62603a7fb
+commit 5e6178cc3eec9b2e577180eb3f54678e210e3289
 Author: Ashish Juyal <ashish.juyal@gmail.com>
-Date:   Fri Jan 28 14:24:43 2022 +0530
+Date:   Sat Jan 29 12:58:00 2022 +0530
 
     removed movies.md
 
-commit 7844a83d1ae301f4ca4f6c7dc4782f7c0b24c778
+commit eb889893e7d4ca7e0282cd6ee7e6dccf1da2e196
 Author: Ashish Juyal <ashish.juyal@gmail.com>
-Date:   Fri Jan 28 13:03:49 2022 +0530
+Date:   Sat Jan 29 12:56:42 2022 +0530
+
+    adding .gitignore
+
+commit 25755bfdffb2ca7d574a2e2e1ebcad253406d283
+Author: Ashish Juyal <ashish.juyal@gmail.com>
+Date:   Sat Jan 29 12:55:59 2022 +0530
 
     adding one more movies and books
 
-commit ae903fdf7af5ccb6a78069b6879e55bd95900e0e
+commit 50b43aedfa8ec3680efbac28037c126e7250cc06
 Author: Ashish Juyal <ashish.juyal@gmail.com>
-Date:   Fri Jan 28 13:02:32 2022 +0530
+Date:   Sat Jan 29 12:55:37 2022 +0530
 
     adding my favourite movies and books
 
-...............
-...............
-...............
+commit 8a9f3488528f43690b11621300cf45df56823d66
+Author: Ashish Juyal <ashish.juyal@gmail.com>
+Date:   Sat Jan 29 12:54:16 2022 +0530
+
+    skipping the staging area
+
+commit 7941f658a5b009db260b74c194fb98e392f3e486
+Author: Ashish Juyal <ashish.juyal@gmail.com>
+Date:   Sat Jan 29 12:53:49 2022 +0530
+
+    making my first commit
 ```
 
 > By default, with no arguments, `git log` lists the commits made in that repository in reverse chronological order; that is, the most recent commits show up first. As you can see, this command lists each commit with its SHA-1 checksum, the author's name and email, the date written, and the commit message.

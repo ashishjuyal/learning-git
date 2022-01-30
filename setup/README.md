@@ -9,7 +9,7 @@ Git is a free, open source tool for source control:
 When you have Git installed you should be able to run these commands and get some output:
 
 ```shell
-# should be version 2.25 or above otherwise install the latest version.
+# should be version 2.28 or above otherwise install the latest version.
 git --version
 ```
 

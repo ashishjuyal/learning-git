@@ -5,41 +5,45 @@ There are two ways to obtain a Git repository:
 1. Create a local directory and turn it in a git repository using `git init`
 2. You can `git clone <url>` an existing Git repository from (GitHub, GitLab, Bitbucket, etc.)
 
-We will start with the first option:
+## Create a local directory (option-1)
 
 ### On Windows (open Git Bash):
 ```
-mkdir c:/learn-git
-cd c:/learn-git
+mkdir -p c:/git-repos/learn-git
+cd c:/git-repos/learn-git
 git init
 ```
 ### On Linux & MacOS (open terminal):
 ```
 cd $HOME
-mkdir learn-git
-cd learn-git
+mkdir -p git-repos/learn-git
+cd git-repos/learn-git
 git init
 ```
 > This will create a new subdirectory named `.git` that contains all your necessary repository files. This is the local Git database. In Linux and MacOS this folder will not be visible because it starts with a `dot` that means a hidden folder. To view use `ls -la` command on the terminal.
 
-## Cloning an existing repository
+## Cloning an existing repository (option-2)
 To copy an existing repository in a new folder you need to use `git clone`. Git receives a full copy of nearly all data that the server has. Every version of every file for the history of the project is pulled down by default when you run `git clone`
 
 ### On Windows (open Git Bash):
-```
+```shell
+# skip the mkdir step if you have created the folder in the option-1
 mkdir c:/git-repos
 cd c:/git-repos
 git clone https://github.com/ashishjuyal/learning-git
 ```
 ### On Linux & MacOS (open terminal):
-```
+```shell
 cd $HOME
+# skip the mkdir step if you have created the folder in the option-1
 mkdir git-repos
 cd git-repos
 git clone https://github.com/ashishjuyal/learning-git
 ```
 
 ## Checking status of your files
+We will start with the option-1, get inside the `git-repos/learn-git` folder
+
 The main tool to determine the state of files inside the repository is the `git status` command. Run this command inside the folder where you have your git repository (the folder with `.git` subfolder)
 
 ```

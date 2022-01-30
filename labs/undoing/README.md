@@ -35,7 +35,7 @@ git commit --amend
 
 Let's check the commit history once again:
 ```
-git log --stat -n 2
+git log --stat -n 1
 ```
 `Output:` Now it will show two files in the last commit
 ```
