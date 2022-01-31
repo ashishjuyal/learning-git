@@ -12,6 +12,17 @@ We don't have any remotes configured at the moment. We were just working using t
 git remote -v
 ```
 
+## Git pull and Git push
+`git pull` and `git push` are two commands to pull and push the code from/to remote repository. You will be seeing them in action in the upcoming examples. `git status` will remain our friend even for verifying that we have a clean working directory and that our LOCAL branch is up to date with the REMOTE Branch.
+
+When you have your project at a point that you want to share, you have to push it upstream. The command for this is simple: `git push <remote> <branch>`. If you want to push your master branch to your origin server (again, cloning generally sets up both of those names for you automatically), then you can run this to push any commits you've done back up to the server:
+
+```shell
+git push origin master
+```
+
+This command works only if you cloned from a server to which you have write access and if nobody has pushed in the meantime. If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected. You'll have to fetch their work first and incorporate it into yours before you'll be allowed to push.
+
 ## Adding remote repositories
 Before you add a remote repository you should have a remote server available. GitHub is one of the services that provides remote Git service. If you don't have a GitHub account, you need to [create one](https://github.com/signup) and then create a new repository. Follow the presentation for the steps:
 
@@ -142,3 +153,115 @@ To github.com:ashishjuyal/books.git
 branch 'books' set up to track 'origin/books'.
 ```
 Books branch is now available on your GitHub repository.
+
+## Compare git log local and remote
+
+```shell
+# print the git log
+git log
+```
+Open the remote commits page for [books branch](https://github.com/ashishjuyal/books/commits/books).
+Compare the local SHA1 with the remote
+
+📋 Compare the local git commit with remote for `main` branch
+
+<details>
+  <summary>Not sure how?</summary>
+
+```shell
+# switch branch
+git switch main
+git log
+```
+Open the remote commits page for [main branch](https://github.com/ashishjuyal/books/commits/main).
+
+</details>
+<br>
+
+## Delete branches local and remote
+
+Once the work is completed on a feature, it is generally recommended to delete the branch. The branch needs to be deleted from local and remote.
+
+To delete a branch from local, use:
+
+```shell
+git branch -d <branchname>
+```
+> The `-d` option is an alias for `--delete`, which only deletes the branch if it has already been fully merged in its upstream branch.
+
+There is another option:
+```shell
+git branch -D <branchname>
+```
+> The `-D` option is an alias for `--delete --force`, which deletes the branch "irrespective of its merged status." [Source: `man git-branch`]
+
+To delete Remote Branch, use:
+```
+git push <remote_name> --delete <branch_name>
+```
+Example:
+```
+git push origin --delete books
+```
+
+## Pull Request
+Pull request is created to propose and collaborate on changes to a repository. These changes are proposed in a branch, which ensures that the default branch only contains finished and approved work.
+
+Let's start with a new branch called `java-code`.
+
+```shell
+# make sure you are on the main branch
+git switch main
+
+# always take pull from the main branch before you start creating a new branch
+git pull origin main
+
+# create the branch
+git branch java-code
+
+# switch to branch
+git switch java-code
+```
+
+create a file with name `Book.java` with this content:
+```java
+import java.io.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Books {
+  public static void main(String[] args) throws IOException {
+    Path fileName = Path.of("books.md");
+    String str = Files.readString(fileName);
+    System.out.println(str);
+  }
+}
+```
+
+```
+git add Book.java
+git commit -m "java program to read and print all books name"
+git push -u origin java-code
+```
+
+Open the books repository [branches page](https://github.com/ashishjuyal/books/branches) and create a new pull request.
+
+![](/img/branches.png)
+
+🎤 See, the `java-code` branch wants to get merged with `main`.
+
+![](/img/pull-request-branches.png)
+
+Click on `Create pull request` button and your pull request is ready.
+
+## Merging a pull request
+<br>
+
+Open the [Pull Request page](https://github.com/ashishjuyal/books/pulls) and select your pull request.
+
+<br>
+
+![](/img/merge.png)
+
+Click on "Merge pull request" and confirm the changes. Your changes will be merged to the `main` branch.
