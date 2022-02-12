@@ -125,9 +125,65 @@ git restore movies.md
 </details>
 <br>
 
+## Retrieving a deleted file from git history
+Once a change is recorded in the Git history it remains there and we can refer and retrieve it at any point of time in future. In this exercise we will retrieve a deleted file from the git history.
+
+Let's start with deleting a file:
+
+```shell
+#deleting index.html
+git rm index.html
+#recording this change in git
+git commit -m "removed index.html"
+```
+
+Let's make one more change in some other file and make a commit to push the deleted commit down the history lane.
+```shell
+#appending one more book to books.md
+echo "one more book" >> books.md
+git add books.md
+git commit -m "added a new book"
+```
+
+Now let's take a look in the git log
+
+```
+git log --pretty=oneline
+```
+
+You need to copy the SHA-1 infront of `removed index.html` comment and use that SHA in the below command to retrieve `index.html` from git history.
+
+```shell
+#caret is important in the below command, it tells git to look just one commit before the deleted commit for getting the file, because the file is present there.
+git checkout <SHA-1>^ -- index.html
+#run the long listing of file, you will see index.html is retrieved
+ls -l
+# run git status to check the status
+git status
+# make a commit to save the retrieved file
+git commit -am "retrieved index.html"
+```
+
 ## Removing the last commit
 Let's suppose you have made the last commit by mistake and you want to remove the last commit. You can use `git reset` command to do that. Remember, this is a dangerous command and you should absolutely be sure of what you are doing before running this command:
 
+`Soft reset` allows git to keep the changes in index, the commit will be removed but the changes will be in `staged` status.
+```shell
+# prints the SHA1 of all the commits, take a note of last commit (from the top)
+git log --pretty=oneline
+# removes the last commit and resets the head to the second-last commit
+git reset --soft HEAD~1
+# verify the output
+git log --pretty=oneline
+# git status will show them as staged
+git status
+```
+So if we run git commit at this point, we'll get a new commit with the same changes:
+```
+git commit -m "resetting the reset :)"
+```
+
+`Hard reset` removes the commit and also the changes done in the last commit. 
 ```shell
 # prints the SHA1 of all the commits, take a note of last commit (from the top)
 git log --pretty=oneline
@@ -135,4 +191,5 @@ git log --pretty=oneline
 git reset --hard HEAD~1
 # verify the output
 git log --pretty=oneline
+# git status will be clean
 ```
