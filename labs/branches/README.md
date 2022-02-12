@@ -64,7 +64,7 @@ ls -l .git/refs/heads/
 cat .git/refs/heads/main
 ```
 
-### We will be storing a list of favourite books in `books.md`. Let's start with adding a header for it. Run the commands one-by-one and observe the output:
+We will be storing a list of favourite books in `books.md`. Let's start with adding a header for it. Run the commands one-by-one and observe the output:
 
 ```shell
 # Adding the header to `books.md` file
@@ -95,7 +95,7 @@ cat .git/refs/heads/books
 cat .git/HEAD
 ```
 
-### Adding a list of books:
+Adding a list of books:
 
 ```shell
 echo $'List of favourite books
@@ -110,7 +110,7 @@ The Adventures of Huckleberry Finn' > books.md
 git commit -am "first set"
 ```
 
-### Switching to books branch. You can also use `git checkout <branchname>`.
+Switching to books branch. You can also use `git checkout <branchname>`.
 ```
 git switch books
 cat books.md
@@ -118,13 +118,11 @@ cat books.md
 cat .git/HEAD
 ```
 
-edit the `books.md` file and add more books to it:
-
-Open your favourite editor and copy the content. If you observe closely, you will see most of the books are same but it also has some more with their order changed:
+Open your favourite editor and copy the below content in `books.md`. If you observe closely, you will see most of the books are same but it also has some more with their order changed:
 ```
 List of favourite books
 -----------------------
-To Kill a Mockingbird
+To Kill a Mocking bird
 Lord of the rings
 Harry potter
 Hamlet
