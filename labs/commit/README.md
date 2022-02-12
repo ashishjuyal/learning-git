@@ -20,8 +20,10 @@ git commit -m "making my first commit"
 ```
 
 check the status:
-```
+```shell
 git status
+# use git log to see the commit details. We will learn more on "git log" a little later in the course
+git log
 ```
 
 ## Skipping the staging area
@@ -29,14 +31,14 @@ The staging area is amazingly useful for crafting commits exactly how you want t
 
 To skip the staging area, Git provides a simple shortcut. Adding the `-a` option to the `git commit` command makes Git automatically stage every file **`that is already tracked`** before doing the commit, letting you skip the `git add` part:
 
-Let's make changes to `README` and use `git commit -a` to commit it without staging (skipping `git add`).
+Let's make changes to `README` and use `-a` option to commit it without staging (skipping `git add`).
 ```
-echo "Adding a new line to test git commit -a" >> README
+echo "Adding a new line to test -a option" >> README
 git status
 git commit -a -m "skipping the staging area"
 ```
 
-📋🎤 Create a new file with some content and name it as `NOTES`. Use the `git commit -a` and check if it allows you to skip the staging area:
+📋🎤 Create a new file with some content and name it as `NOTES`. Try making commit by skipping the staging area and see what happens:
 
 <details>
   <summary>Not sure how?</summary>
@@ -49,7 +51,7 @@ git status
 git commit -a -m "trying to skip the staging area for a newfile NOTES"
 git status
 ```
-You will see the NOTES file was not committed. New files have to be added using `git add`. The `git commit -a` works only with already tracked files.
+You will see the NOTES file was not committed. New files have to be added using `git add`. The `-a` option works only with already tracked files.
 
 </details>
 <br>
